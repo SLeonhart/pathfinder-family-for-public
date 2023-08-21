@@ -1,0 +1,85 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "shift+alt+1",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All creature types link"
+        }
+    },
+    {
+        "key": "shift+alt+2",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All monster abilities link"
+        }
+    },
+    {
+        "key": "shift+alt+3",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All spells link"
+        }
+    },
+    {
+        "key": "shift+alt+4",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All feats link"
+        }
+    },
+    {
+        "key": "shift+alt+5",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All skills link"
+        }
+    },
+    {
+        "key": "shift+alt+6",
+        "command": "replacerules.runRuleset",
+        "args": {
+            "rulesetName": "All languages link"
+        }
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "pathfinder_skills"
+        }
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "pathfinder_a"
+        }
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "pathfinder_dice"
+        }
+    },
+    {
+        "key": "shift+alt+w",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "html_p"
+        }
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "pathfinder_table"
+        }
+    }
+]

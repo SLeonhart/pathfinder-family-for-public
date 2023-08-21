@@ -1,0 +1,21 @@
+variables:
+  prod_group: "m1"
+  external_port: "9007"
+  ENABLED_LINT: "allow-failure-true"
+  ENABLED_TEST: "allow-failure-true"
+  ENABLED_DEPLOY: "false"
+  ENABLED_BUILD_APP: "false"
+  ENABLED_BUILD_IMAGE: "false"
+  WRK_CPU_LIMIT_TEST: 500m
+  IMG_SUFFIX: "/${CI_PROJECT_NAME}"
+  IMG_VERSION: "${CI_COMMIT_SHORT_SHA}"
+  GOOS: "linux"
+  GOARCH: "amd64"
+  CGO_ENABLED: "1"
+  GL_DEBUG: "loader,gocritic,env"
+  GOLANGCI_LINT_TIMEOUT: "5m"
+
+include:
+  - project: 'cashback/devops-apps/deploy'
+    ref: ocean
+    file: 'go_build_and_deploy.gitlab-ci.yml'

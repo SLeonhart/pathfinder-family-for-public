@@ -1,0 +1,22 @@
+{
+	"pathfinder_a": {
+		"prefix": "pathfinder_a",
+		"body": "<a href=\"$CLIPBOARD\" class=\"link\">$TM_SELECTED_TEXT</a>$1",
+		"description": "Формирование ссылки для pathfinder"
+	},
+	"pathfinder_dice": {
+		"prefix": "pathfinder_dice",
+		"body": "<a href=\"/dice?notation=$TM_SELECTED_TEXT&roll\" class=\"link\">$TM_SELECTED_TEXT</a>$1",
+		"description": "Формирование ссылки на бросок кубика для pathfinder"
+	},
+	"html_p": {
+		"prefix": "html_p",
+		"body": "<${2:p}>$TM_SELECTED_TEXT</${2:p}>",
+		"description": "Формирование ссылки на бросок кубика для pathfinder"
+	},
+	"pathfinder_table": {
+		"prefix": "pathfinder_table",
+		"body": "<div class=\"tableBlock\">\n\t<div class=\"tableHeader\">$1</div>\n\t<table class=\"commonTable\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<td>$2</td>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td>$3</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td colspan=\"1\">* $4\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n</div>",
+		"description": "Формирование блока с таблицей для pathfinder"
+	}
+}

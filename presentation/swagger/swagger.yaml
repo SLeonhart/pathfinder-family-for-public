@@ -1,0 +1,6747 @@
+definitions:
+  model.Ability:
+    properties:
+      alias:
+        type: string
+      isSkillArmorPenalty:
+        type: boolean
+      name:
+        type: string
+      shortName:
+        type: string
+    type: object
+  model.AbilityDescription:
+    properties:
+      description:
+        type: string
+      engName:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  model.AddDonateRequest:
+    properties:
+      dt:
+        type: string
+      helper:
+        type: string
+      sum:
+        type: number
+    type: object
+  model.AddGoodInWaitingListRequest:
+    properties:
+      id:
+        type: integer
+    type: object
+  model.AddNewsRequest:
+    properties:
+      body:
+        type: string
+      pushBody:
+        type: string
+      pushImageLink:
+        type: string
+      pushTargetLink:
+        type: string
+      pushTitle:
+        type: string
+    type: object
+  model.Affliction:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      cost:
+        type: number
+      cure:
+        type: string
+      description:
+        type: string
+      effect:
+        type: string
+      engName:
+        type: string
+      frequency:
+        type: string
+      initialEffect:
+        type: string
+      mainType:
+        $ref: '#/definitions/model.NameAlias'
+      name:
+        type: string
+      onset:
+        type: string
+      save:
+        type: string
+      secondaryEffect:
+        type: string
+      secondaryTypes:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      typeDescription:
+        type: string
+    type: object
+  model.AnimalCompanion:
+    properties:
+      alias:
+        type: string
+      beast:
+        $ref: '#/definitions/model.NameAlias'
+      book:
+        $ref: '#/definitions/model.Books'
+      engName:
+        type: string
+      name:
+        type: string
+      startAc:
+        type: string
+      startAttack:
+        type: string
+      startCharisma:
+        type: integer
+      startCombatManeuverDefense:
+        type: string
+      startConstitution:
+        type: integer
+      startDexterity:
+        type: integer
+      startIntelligence:
+        type: integer
+      startSize:
+        type: string
+      startSpecialAttacks:
+        type: string
+      startSpecialQualities:
+        type: string
+      startSpeed:
+        type: string
+      startStrength:
+        type: integer
+      startWisdom:
+        type: integer
+      updateAc:
+        type: string
+      updateAttack:
+        type: string
+      updateCharisma:
+        type: integer
+      updateCombatManeuverDefense:
+        type: string
+      updateConstitution:
+        type: integer
+      updateDexterity:
+        type: integer
+      updateIntelligence:
+        type: integer
+      updateLevel:
+        type: integer
+      updateSize:
+        type: string
+      updateSpecialAttacks:
+        type: string
+      updateSpecialQualities:
+        type: string
+      updateSpeed:
+        type: string
+      updateStrength:
+        type: integer
+      updateWisdom:
+        type: integer
+    type: object
+  model.Archetype:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.ArchetypeInfo:
+    properties:
+      alignment:
+        type: string
+      archetypeFeatures:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      features:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      hitDie:
+        type: integer
+      infoLinks:
+        type: string
+      name:
+        type: string
+      parentClass:
+        $ref: '#/definitions/model.NameAlias'
+      skillRanksPerLevel:
+        type: integer
+      skills:
+        items:
+          $ref: '#/definitions/model.Skill'
+        type: array
+      startingWealth:
+        type: string
+      tableFeatures:
+        type: string
+      tableSpellCount:
+        type: string
+    type: object
+  model.Armor:
+    properties:
+      alias:
+        type: string
+      arcaneSpellFailureChance:
+        type: integer
+      armorBonus:
+        type: integer
+      armorCheckPenalty:
+        type: integer
+      book:
+        $ref: '#/definitions/model.Books'
+      cost:
+        type: number
+      description:
+        type: string
+      engName:
+        type: string
+      maxDexBonus:
+        type: integer
+      name:
+        type: string
+      speed20:
+        type: integer
+      speed30:
+        type: integer
+      type:
+        $ref: '#/definitions/model.NameAlias'
+      weight:
+        type: number
+    type: object
+  model.Beast:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      childs:
+        items:
+          type: integer
+        type: array
+      climate:
+        $ref: '#/definitions/model.NameAlias'
+      cr:
+        type: number
+      creatureType:
+        $ref: '#/definitions/model.NameAlias'
+      description:
+        type: string
+      engName:
+        type: string
+      exp:
+        type: integer
+      fullCreatureType:
+        type: string
+      id:
+        type: integer
+      isUnique:
+        type: boolean
+      name:
+        type: string
+      names:
+        type: string
+      roles:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      terrain:
+        $ref: '#/definitions/model.NameAlias'
+    type: object
+  model.BeastInfo:
+    properties:
+      acArmor:
+        type: integer
+      acDeflection:
+        type: integer
+      acDescription:
+        type: string
+      acDodge:
+        type: integer
+      acInsight:
+        type: integer
+      acMonk:
+        type: integer
+      acNatural:
+        type: integer
+      acRage:
+        type: integer
+      acShield:
+        type: integer
+      acString:
+        type: string
+      acWisdom:
+        type: integer
+      alias:
+        type: string
+      animalCompanion:
+        $ref: '#/definitions/model.NameAlias'
+      aura:
+        type: string
+      baseAttack:
+        type: integer
+      baseParameters:
+        type: string
+      beforeCombat:
+        type: string
+      bloodline:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      charisma:
+        type: integer
+      childs:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      climate:
+        $ref: '#/definitions/model.NameAlias'
+      combatGear:
+        type: string
+      combatManeuverBonus:
+        type: integer
+      combatManeuverBonusComment:
+        type: string
+      combatManeuverDefense:
+        type: integer
+      combatManeuverDefenseComment:
+        type: string
+      constitution:
+        type: integer
+      constructionCasterLevel:
+        type: integer
+      constructionDescription:
+        type: string
+      constructionPrice:
+        type: number
+      constructionPriceComment:
+        type: string
+      constructionRequirements:
+        type: string
+      constructionSkill:
+        type: string
+      costPrice:
+        type: number
+      costPriceComment:
+        type: string
+      cr:
+        type: number
+      creatureType:
+        $ref: '#/definitions/model.NameAlias'
+      damageResist:
+        type: string
+      defensiveAbilities:
+        type: string
+      description:
+        type: string
+      dexterity:
+        type: integer
+      domains:
+        type: string
+      duringCombat:
+        type: string
+      engName:
+        type: string
+      environment:
+        type: string
+      exp:
+        type: integer
+      fastHealing:
+        type: string
+      feats:
+        type: string
+      fortitude:
+        type: integer
+      fullCreatureType:
+        type: string
+      fullDescription:
+        type: string
+      gear:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      hitPoints:
+        type: integer
+      hitPointsComment:
+        type: string
+      hitPointsDescription:
+        type: string
+      immune:
+        type: string
+      initiative:
+        type: integer
+      intelligence:
+        type: integer
+      languages:
+        type: string
+      maxAcDexterity:
+        type: integer
+      meleeAttacks:
+        type: string
+      morale:
+        type: string
+      name:
+        type: string
+      names:
+        type: string
+      oppositionSchools:
+        type: string
+      organization:
+        type: string
+      otherGear:
+        type: string
+      parent:
+        $ref: '#/definitions/model.NameAlias'
+      patron:
+        type: string
+      perception:
+        type: integer
+      perceptionComment:
+        type: string
+      rangedAttacks:
+        type: string
+      reach:
+        type: string
+      reflex:
+        type: integer
+      regeneration:
+        type: string
+      resist:
+        type: string
+      roles:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      rootPageDescription:
+        type: string
+      school:
+        type: string
+      senses:
+        type: string
+      sizeType:
+        $ref: '#/definitions/model.NameAlias'
+      skills:
+        type: string
+      skillsRacialModifiers:
+        type: string
+      space:
+        type: string
+      specialAbilities:
+        type: string
+      specialAttacks:
+        type: string
+      specialQualities:
+        type: string
+      speed:
+        type: string
+      spellLikeAbilities:
+        type: string
+      spellResist:
+        type: integer
+      spellResistComment:
+        type: string
+      spellbook:
+        type: string
+      spellsKnown:
+        type: string
+      spellsPrepared:
+        type: string
+      strength:
+        type: integer
+      terrain:
+        $ref: '#/definitions/model.NameAlias'
+      treasure:
+        type: string
+      weaknesses:
+        type: string
+      will:
+        type: integer
+      willComment:
+        type: string
+      wisdom:
+        type: integer
+    type: object
+  model.Bloodline:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.BloodlineInfo:
+    properties:
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      fullDescription:
+        type: string
+      name:
+        type: string
+    type: object
+  model.BookForBotSpellList:
+    properties:
+      abbreviation:
+        type: string
+      alias:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      order:
+        type: integer
+    type: object
+  model.BookInfo:
+    properties:
+      afflictions:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      archetypes:
+        items:
+          $ref: '#/definitions/model.BookInfoWithClassAlias'
+        type: array
+      armors:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      beasts:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      bloodlines:
+        items:
+          $ref: '#/definitions/model.BookInfoWithClassAlias'
+        type: array
+      classes:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      domains:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      equipments:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      feats:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      gods:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      haunts:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      inquisitions:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      magicItemAbilities:
+        items:
+          $ref: '#/definitions/model.BookMagicItemAbility'
+        type: array
+      magicItems:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      monsterAbilities:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      prestigeClasses:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      races:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      schools:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      spells:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      subdomains:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      traits:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      traps:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      weapons:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+    type: object
+  model.BookInfoWithClassAlias:
+    properties:
+      alias:
+        type: string
+      classAlias:
+        type: string
+      name:
+        type: string
+    type: object
+  model.BookMagicItemAbility:
+    properties:
+      alias:
+        type: string
+      name:
+        type: string
+      types:
+        items:
+          type: string
+        type: array
+    type: object
+  model.Books:
+    properties:
+      abbreviation:
+        type: string
+      alias:
+        type: string
+      name:
+        type: string
+      order:
+        type: integer
+    type: object
+  model.BotBook:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  model.BotClassInfo:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      spellLevels:
+        items:
+          type: integer
+        type: array
+      tableFeatures:
+        type: string
+      tableSpellCount:
+        type: string
+    type: object
+  model.BotSpellInfo:
+    properties:
+      alias:
+        type: string
+      area:
+        type: string
+      book:
+        $ref: '#/definitions/model.BookForBotSpellList'
+      castingTime:
+        type: string
+      classes:
+        items:
+          $ref: '#/definitions/model.ClassForBotSpellList'
+        type: array
+      components:
+        type: string
+      description:
+        type: string
+      duration:
+        type: string
+      effect:
+        type: string
+      engName:
+        type: string
+      god:
+        $ref: '#/definitions/model.NameAlias'
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      id:
+        type: integer
+      name:
+        type: string
+      races:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      range:
+        type: string
+      savingThrow:
+        type: string
+      school:
+        $ref: '#/definitions/model.SchoolForList'
+      shortDescription:
+        type: string
+      shortDescriptionComponents:
+        type: string
+      spellResistance:
+        type: integer
+      subSchool:
+        type: string
+      target:
+        type: string
+    type: object
+  model.ChangeUserFavouritesItemsRequest:
+    properties:
+      forAdd:
+        type: boolean
+      guid:
+        type: string
+      pageName:
+        type: string
+      url:
+        type: string
+    type: object
+  model.Class:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.ClassForBotSpellList:
+    properties:
+      alias:
+        type: string
+      id:
+        type: integer
+      level:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.ClassForSkill:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      isClassSkill:
+        type: boolean
+      name:
+        type: string
+      shortName:
+        type: string
+    type: object
+  model.ClassForSpellList:
+    properties:
+      alias:
+        type: string
+      level:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.ClassInfo:
+    properties:
+      alignment:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      features:
+        type: string
+      fullDescription:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      hitDie:
+        type: integer
+      infoLinks:
+        type: string
+      isHaveArchetypes:
+        type: boolean
+      name:
+        type: string
+      parentClasses:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      role:
+        type: string
+      skillRanksPerLevel:
+        type: integer
+      skills:
+        items:
+          $ref: '#/definitions/model.Skill'
+        type: array
+      startingWealth:
+        type: string
+      tableFeatures:
+        type: string
+      tableSpellCount:
+        type: string
+    type: object
+  model.ClassWithArchetypes:
+    properties:
+      alias:
+        type: string
+      archetypes:
+        items:
+          $ref: '#/definitions/model.Archetype'
+        type: array
+      archetypesDescription:
+        type: string
+      name:
+        type: string
+    type: object
+  model.CreatureType:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      engName:
+        type: string
+      features:
+        type: string
+      isSubtype:
+        type: boolean
+      name:
+        type: string
+      traits:
+        type: string
+    type: object
+  model.Domain:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      childs:
+        items:
+          $ref: '#/definitions/model.Domain'
+        type: array
+      description:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  model.DomainInfo:
+    properties:
+      book:
+        $ref: '#/definitions/model.Books'
+      childs:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      description:
+        type: string
+      gods:
+        items:
+          type: string
+        type: array
+      innerDescription:
+        type: string
+      name:
+        type: string
+      parents:
+        items:
+          $ref: '#/definitions/model.DomainParent'
+        type: array
+      power0Description:
+        type: string
+      power0Name:
+        type: string
+      power1Description:
+        type: string
+      power1Name:
+        type: string
+      power2Description:
+        type: string
+      power2Name:
+        type: string
+      spells:
+        items:
+          $ref: '#/definitions/model.DomainSpell'
+        type: array
+    type: object
+  model.DomainParent:
+    properties:
+      alias:
+        type: string
+      name:
+        type: string
+      power1Description:
+        type: string
+      power1Name:
+        type: string
+      power2Description:
+        type: string
+      power2Name:
+        type: string
+      spells:
+        items:
+          $ref: '#/definitions/model.DomainSpell'
+        type: array
+    type: object
+  model.DomainSpell:
+    properties:
+      alias:
+        type: string
+      comment:
+        type: string
+      level:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.ElasticRequest:
+    properties:
+      dt:
+        type: string
+    type: object
+  model.ErrorResponse:
+    properties:
+      message:
+        type: string
+      title:
+        type: string
+    type: object
+  model.Favourite:
+    properties:
+      name:
+        type: string
+      url:
+        type: string
+    type: object
+  model.Favourites:
+    properties:
+      favourites:
+        items:
+          $ref: '#/definitions/model.Favourite'
+        type: array
+      guid:
+        type: string
+      name:
+        type: string
+    type: object
+  model.Feat:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      parentFeatId:
+        type: integer
+      requirements:
+        type: string
+      types:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+    type: object
+  model.FeatInfo:
+    properties:
+      benefit:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      fullDescription:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      name:
+        type: string
+      normal:
+        type: string
+      prerequisites:
+        type: string
+      special:
+        type: string
+      types:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+    type: object
+  model.FeedbackRequest:
+    properties:
+      email:
+        type: string
+      message:
+        type: string
+      theme:
+        type: string
+    type: object
+  model.GetSkillsResponse:
+    properties:
+      skillsPerLvl:
+        items:
+          $ref: '#/definitions/model.SkillsPerLvlInfo'
+        type: array
+      skillsWithClasses:
+        items:
+          $ref: '#/definitions/model.SkillWithClasses'
+        type: array
+    type: object
+  model.God:
+    properties:
+      alias:
+        type: string
+      aligment:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      domains:
+        items:
+          $ref: '#/definitions/model.GodDomain'
+        type: array
+      engName:
+        type: string
+      favoredWeapon:
+        type: string
+      name:
+        type: string
+      portfolios:
+        type: string
+      sacredAnimal:
+        type: string
+      sacredColors:
+        type: string
+      symbol:
+        type: string
+      title:
+        type: string
+      type:
+        $ref: '#/definitions/model.NameAliasDescription'
+    type: object
+  model.GodDomain:
+    properties:
+      alias:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  model.Good:
+    properties:
+      cnt:
+        type: integer
+      id:
+        type: integer
+      imageUrls:
+        type: string
+      inWaitingList:
+        type: boolean
+      name:
+        type: string
+      price:
+        type: integer
+      priority:
+        type: integer
+      url:
+        type: string
+    type: object
+  model.GoodAndService:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      childs:
+        items:
+          $ref: '#/definitions/model.GoodAndService'
+        type: array
+      cost:
+        type: number
+      costDescription:
+        type: string
+      costOfPassage:
+        type: number
+      costSpecial:
+        type: string
+      craftDc:
+        type: integer
+      description:
+        type: string
+      engName:
+        type: string
+      equipmentSubType:
+        type: string
+      name:
+        type: string
+      parents:
+        items:
+          type: string
+        type: array
+      type:
+        $ref: '#/definitions/model.NameAliasDescription'
+      weight:
+        type: number
+      weightDescription:
+        type: string
+      weightSpecial:
+        type: string
+    type: object
+  model.Haunt:
+    properties:
+      alias:
+        type: string
+      alignmentArea:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      casterLevel:
+        type: integer
+      cr:
+        type: number
+      crStr:
+        type: string
+      destruction:
+        type: string
+      engName:
+        type: string
+      exp:
+        type: integer
+      hp:
+        type: integer
+      name:
+        type: string
+      notice:
+        type: string
+      reset:
+        type: string
+      trigger:
+        type: string
+      weakness:
+        type: string
+    type: object
+  model.Helper:
+    properties:
+      alias:
+        type: string
+      isMain:
+        type: boolean
+      name:
+        type: string
+    type: object
+  model.HelperStat:
+    properties:
+      alias:
+        type: string
+      cnt:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.MagicItemForList:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      engName:
+        type: string
+      name:
+        type: string
+      slot:
+        $ref: '#/definitions/model.NameAlias'
+      type:
+        $ref: '#/definitions/model.NameAlias'
+    type: object
+  model.MagicItemInfo:
+    properties:
+      alias:
+        type: string
+      aura:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      cl:
+        type: integer
+      constructionCost:
+        type: number
+      constructionRequirements:
+        type: string
+      creationMagicItems:
+        type: string
+      description:
+        type: string
+      destruction:
+        type: string
+      engName:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      name:
+        type: string
+      price:
+        type: number
+      priceComment:
+        type: string
+      slot:
+        $ref: '#/definitions/model.NameAlias'
+      slotComment:
+        type: string
+      statistics:
+        type: string
+      type:
+        $ref: '#/definitions/model.NameAlias'
+      weight:
+        type: number
+      weightComment:
+        type: string
+    type: object
+  model.MediumSpiritInfo:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      engName:
+        type: string
+      favoredLocations:
+        type: string
+      influencePenalty:
+        type: string
+      name:
+        type: string
+      seanceBoon:
+        type: string
+      spiritBonus:
+        type: string
+      spiritPowerBase:
+        $ref: '#/definitions/model.AbilityDescription'
+      spiritPowerGreater:
+        $ref: '#/definitions/model.AbilityDescription'
+      spiritPowerIntermediate:
+        $ref: '#/definitions/model.AbilityDescription'
+      spiritPowerSupreme:
+        $ref: '#/definitions/model.AbilityDescription'
+      taboos:
+        type: string
+      type:
+        type: string
+    type: object
+  model.MonsterAbility:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      engName:
+        type: string
+      format:
+        type: string
+      location:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  model.MonstrousMount:
+    properties:
+      alias:
+        type: string
+      beast:
+        $ref: '#/definitions/model.NameAlias'
+      book:
+        $ref: '#/definitions/model.Books'
+      engName:
+        type: string
+      masteryDescription:
+        type: string
+      masteryLevel:
+        type: integer
+      name:
+        type: string
+      prerequisites:
+        type: string
+      startAc:
+        type: string
+      startAttack:
+        type: string
+      startCharisma:
+        type: integer
+      startConstitution:
+        type: integer
+      startDexterity:
+        type: integer
+      startIntelligence:
+        type: integer
+      startLanguages:
+        type: string
+      startSize:
+        type: string
+      startSpecialAttacks:
+        type: string
+      startSpecialQualities:
+        type: string
+      startSpeed:
+        type: string
+      startStrength:
+        type: integer
+      startWisdom:
+        type: integer
+      updateAc:
+        type: string
+      updateAttack:
+        type: string
+      updateCharisma:
+        type: integer
+      updateConstitution:
+        type: integer
+      updateDexterity:
+        type: integer
+      updateIntelligence:
+        type: integer
+      updateLanguages:
+        type: string
+      updateLevel:
+        type: integer
+      updateSize:
+        type: string
+      updateSpecialAttacks:
+        type: string
+      updateSpecialQualities:
+        type: string
+      updateSpeed:
+        type: string
+      updateStrength:
+        type: integer
+      updateWisdom:
+        type: integer
+    type: object
+  model.NameAlias:
+    properties:
+      alias:
+        type: string
+      name:
+        type: string
+    type: object
+  model.NameAliasDescription:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.News:
+    properties:
+      body:
+        type: string
+      dt:
+        type: string
+      id:
+        type: integer
+      pushBody:
+        type: string
+      pushImageLink:
+        type: string
+      pushTargetLink:
+        type: string
+      pushTitle:
+        type: string
+    type: object
+  model.NpcInfo:
+    properties:
+      alignment:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      features:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      hitDie:
+        type: integer
+      name:
+        type: string
+      skillRanksPerLevel:
+        type: integer
+      skills:
+        items:
+          $ref: '#/definitions/model.Skill'
+        type: array
+      tableFeatures:
+        type: string
+      tableSpellCount:
+        type: string
+    type: object
+  model.Order:
+    properties:
+      alias:
+        type: string
+      className:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.OrderInfo:
+    properties:
+      description:
+        type: string
+      fullDescription:
+        type: string
+      name:
+        type: string
+    type: object
+  model.PrestigeClassInfo:
+    properties:
+      alignment:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      features:
+        type: string
+      fullDescription:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      hitDie:
+        type: integer
+      name:
+        type: string
+      requirements:
+        type: string
+      role:
+        type: string
+      skillRanksPerLevel:
+        type: integer
+      skills:
+        items:
+          $ref: '#/definitions/model.Skill'
+        type: array
+      tableFeatures:
+        type: string
+      tableSpellCount:
+        type: string
+    type: object
+  model.Race:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      name:
+        type: string
+    type: object
+  model.RaceClass:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.RaceInfo:
+    properties:
+      additionalDescription:
+        type: string
+      adventurerClass:
+        items:
+          $ref: '#/definitions/model.RaceClass'
+        type: array
+      adventurers:
+        type: string
+      alignmentAndReligion:
+        type: string
+      alterRaceTraits:
+        items:
+          $ref: '#/definitions/model.RaceTrait'
+        type: array
+      baseRaceTraits:
+        items:
+          $ref: '#/definitions/model.RaceTrait'
+        type: array
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      favoredClass:
+        items:
+          $ref: '#/definitions/model.RaceClass'
+        type: array
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      names:
+        items:
+          $ref: '#/definitions/model.RaceName'
+        type: array
+      namesDescription:
+        type: string
+      physicalDescription:
+        type: string
+      relations:
+        type: string
+      society:
+        type: string
+    type: object
+  model.RaceName:
+    properties:
+      isMale:
+        type: boolean
+      name:
+        type: string
+    type: object
+  model.RaceTrait:
+    properties:
+      baseRaceTraits:
+        items:
+          type: string
+        type: array
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  model.RenameUserFavouritesRequest:
+    properties:
+      guid:
+        type: string
+      name:
+        type: string
+    type: object
+  model.School:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      name:
+        type: string
+      type:
+        $ref: '#/definitions/model.NameAliasDescription'
+    type: object
+  model.SchoolForList:
+    properties:
+      alias:
+        type: string
+      name:
+        type: string
+      type:
+        $ref: '#/definitions/model.NameAlias'
+    type: object
+  model.SearchResult:
+    properties:
+      h1:
+        type: string
+      score:
+        type: number
+      type:
+        type: string
+      url:
+        type: string
+    type: object
+  model.SendPushRequest:
+    properties:
+      body:
+        type: string
+      image:
+        type: string
+      link:
+        type: string
+      title:
+        type: string
+      token:
+        type: string
+    type: object
+  model.SendTelegramRequest:
+    properties:
+      body:
+        type: string
+      isTest:
+        type: boolean
+    type: object
+  model.SendVkRequest:
+    properties:
+      body:
+        type: string
+      images:
+        items:
+          type: string
+        type: array
+      isTest:
+        type: boolean
+    type: object
+  model.ShamanSpiritInfo:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      description:
+        type: string
+      engName:
+        type: string
+      greaterSpiritAbility:
+        $ref: '#/definitions/model.AbilityDescription'
+      hexes:
+        items:
+          $ref: '#/definitions/model.AbilityDescription'
+        type: array
+      manifestation:
+        type: string
+      name:
+        type: string
+      parent:
+        $ref: '#/definitions/model.NameAlias'
+      spells:
+        items:
+          $ref: '#/definitions/model.SpiritSpell'
+        type: array
+      spiritAbility:
+        $ref: '#/definitions/model.AbilityDescription'
+      spiritAnimal:
+        type: string
+      trueSpiritAbility:
+        $ref: '#/definitions/model.AbilityDescription'
+    type: object
+  model.Skill:
+    properties:
+      ability:
+        $ref: '#/definitions/model.Ability'
+      alias:
+        type: string
+      name:
+        type: string
+    type: object
+  model.SkillInfo:
+    properties:
+      ability:
+        $ref: '#/definitions/model.Ability'
+      description:
+        type: string
+      fullDescription:
+        type: string
+    type: object
+  model.SkillWithClasses:
+    properties:
+      alias:
+        type: string
+      classes:
+        items:
+          $ref: '#/definitions/model.ClassForSkill'
+        type: array
+      name:
+        type: string
+      prestigeClasses:
+        items:
+          $ref: '#/definitions/model.ClassForSkill'
+        type: array
+    type: object
+  model.SkillsPerLvlInfo:
+    properties:
+      alias:
+        type: string
+      isPrestige:
+        type: boolean
+      name:
+        type: string
+      skillRanksPerLevel:
+        type: integer
+    type: object
+  model.Spell:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      classes:
+        items:
+          $ref: '#/definitions/model.ClassForSpellList'
+        type: array
+      name:
+        type: string
+      schools:
+        items:
+          $ref: '#/definitions/model.SchoolForList'
+        type: array
+      shortDescription:
+        type: string
+      shortDescriptionComponents:
+        type: string
+    type: object
+  model.SpellInfo:
+    properties:
+      area:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      castingTime:
+        type: string
+      classes:
+        items:
+          $ref: '#/definitions/model.ClassForSpellList'
+        type: array
+      components:
+        type: string
+      description:
+        type: string
+      duration:
+        type: string
+      effect:
+        type: string
+      engName:
+        type: string
+      god:
+        $ref: '#/definitions/model.NameAlias'
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      name:
+        type: string
+      races:
+        items:
+          $ref: '#/definitions/model.NameAlias'
+        type: array
+      range:
+        type: string
+      savingThrow:
+        type: string
+      school:
+        $ref: '#/definitions/model.SchoolForList'
+      spellResistance:
+        type: integer
+      subSchool:
+        type: string
+      target:
+        type: string
+    type: object
+  model.SpiritSpell:
+    properties:
+      alias:
+        type: string
+      comment:
+        type: string
+      level:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.StaticPage:
+    properties:
+      content:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      slug:
+        type: string
+    type: object
+  model.Thanks:
+    properties:
+      helperStat:
+        items:
+          $ref: '#/definitions/model.HelperStat'
+        type: array
+      type:
+        type: string
+    type: object
+  model.Trait:
+    properties:
+      alias:
+        type: string
+      benefit:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      engName:
+        type: string
+      name:
+        type: string
+      prerequisites:
+        type: string
+      type:
+        $ref: '#/definitions/model.TraitType'
+    type: object
+  model.TraitType:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      parentType:
+        $ref: '#/definitions/model.TraitType'
+    type: object
+  model.Translation:
+    properties:
+      group:
+        type: string
+      items:
+        items:
+          $ref: '#/definitions/model.TranslationItem'
+        type: array
+    type: object
+  model.TranslationItem:
+    properties:
+      alias:
+        type: string
+      engName:
+        type: string
+      forLevel:
+        type: string
+      helpers:
+        items:
+          $ref: '#/definitions/model.Helper'
+        type: array
+      name:
+        type: string
+      order:
+        type: integer
+    type: object
+  model.Trap:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      cr:
+        type: number
+      dcDisableDevice:
+        type: integer
+      dcPerception:
+        type: integer
+      duration:
+        type: string
+      effect:
+        type: string
+      engName:
+        type: string
+      name:
+        type: string
+      reset:
+        type: string
+      trigger:
+        type: string
+      type:
+        type: string
+    type: object
+  model.UpsertResponse:
+    properties:
+      id:
+        type: integer
+    type: object
+  model.UserAuthRequest:
+    properties:
+      login:
+        type: string
+      password:
+        type: string
+    type: object
+  model.UserAuthResponse:
+    properties:
+      url:
+        type: string
+    type: object
+  model.UserChangeDataRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  model.UserFavouritesRequest:
+    properties:
+      guid:
+        type: string
+    type: object
+  model.UserRegisterRequest:
+    properties:
+      email:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+    type: object
+  model.UserResetPasswordRequest:
+    properties:
+      email:
+        type: string
+      login:
+        type: string
+    type: object
+  model.Weapon:
+    properties:
+      alias:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      capacity:
+        type: integer
+      childs:
+        items:
+          $ref: '#/definitions/model.Weapon'
+        type: array
+      cost:
+        type: number
+      criticalDamage:
+        type: string
+      criticalRoll:
+        type: string
+      damageM:
+        type: string
+      damageS:
+        type: string
+      description:
+        type: string
+      encumbranceCategory:
+        $ref: '#/definitions/model.NameAlias'
+      engName:
+        type: string
+      misfire:
+        type: string
+      name:
+        type: string
+      parents:
+        items:
+          type: string
+        type: array
+      proficientCategory:
+        $ref: '#/definitions/model.NameAlias'
+      range:
+        type: string
+      rangeCategory:
+        $ref: '#/definitions/model.NameAlias'
+      special:
+        type: string
+      type:
+        type: string
+      weight:
+        type: number
+    type: object
+  model.WildTalent:
+    properties:
+      alias:
+        type: string
+      associatedBlasts:
+        type: string
+      blastType:
+        type: string
+      book:
+        $ref: '#/definitions/model.Books'
+      burn:
+        type: integer
+      burnDescription:
+        type: string
+      damage:
+        type: string
+      description:
+        type: string
+      element:
+        type: string
+      engName:
+        type: string
+      level:
+        type: integer
+      name:
+        type: string
+      prerequisites:
+        type: string
+      savingThrow:
+        type: string
+      spellResistance:
+        type: string
+      type:
+        $ref: '#/definitions/model.WildTalentType'
+      typeDescription:
+        type: string
+    type: object
+  model.WildTalentType:
+    properties:
+      alias:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      order:
+        type: integer
+      shortName:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Сайт с информацией для настольной игры Pathfinder
+  license:
+    name: Чудинов Андрей Дмитриевич
+  title: Pathfinder Family
+  version: "20220823"
+paths:
+  /:
+    get:
+      description: Что нового
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Что нового
+      tags:
+      - Site
+  /ability:
+    get:
+      description: Характеристики
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Характеристики
+      tags:
+      - Site
+  /ability/{alias}:
+    get:
+      description: Информация по характеристике
+      parameters:
+      - description: Alias характеристики
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по характеристике
+      tags:
+      - Site
+  /about:
+    get:
+      description: Об игре
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Об игре
+      tags:
+      - Site
+  /aboutMe:
+    get:
+      description: Обо мне
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Обо мне
+      tags:
+      - Site
+  /actionsInCombat:
+    get:
+      description: Действия в бою
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Действия в бою
+      tags:
+      - Site
+  /admin/profile:
+    get:
+      description: Профиль администратора
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Профиль администратора
+      tags:
+      - Site
+  /afflictions:
+    get:
+      description: Недуги
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Недуги
+      tags:
+      - Site
+  /alignment:
+    get:
+      description: Мировоззрение
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Мировоззрение
+      tags:
+      - Site
+  /api/abilities:
+    get:
+      description: Список характеристик
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Class'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список характеристик
+      tags:
+      - API
+  /api/abilityInfo:
+    get:
+      description: Информация по характеристике
+      parameters:
+      - description: Alias народа
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.ClassInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по характеристике
+      tags:
+      - API
+  /api/admin/donate:
+    post:
+      description: Добавление доната
+      parameters:
+      - description: Модель добавления доната
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.AddDonateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление доната
+      tags:
+      - API
+  /api/admin/news:
+    post:
+      description: Добавление новости на сайт
+      parameters:
+      - description: Модель новости
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.AddNewsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление новости на сайт
+      tags:
+      - API
+  /api/admin/push:
+    delete:
+      description: Добавление доната
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление доната
+      tags:
+      - API
+    post:
+      description: Отправка пушей
+      parameters:
+      - description: Модель сообщения пуша
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.SendPushRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Отправка пушей
+      tags:
+      - API
+  /api/admin/search:
+    delete:
+      description: Запустить процесс чистки старых данных в эластике
+      parameters:
+      - description: Тело сообщения
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.ElasticRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Запустить процесс чистки старых данных в эластике
+      tags:
+      - API
+    patch:
+      description: Запустить процесс обновления данных в эластике
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Запустить процесс обновления данных в эластике
+      tags:
+      - API
+    post:
+      description: Запустить процесс добавления новых данных в эластике
+      parameters:
+      - description: Тело сообщения
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.ElasticRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Запустить процесс добавления новых данных в эластике
+      tags:
+      - API
+  /api/admin/telegram:
+    post:
+      description: Отправка сообщения в телеграм
+      parameters:
+      - description: Модель сообщения телеграма
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.SendTelegramRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Отправка сообщения в телеграм
+      tags:
+      - API
+  /api/admin/vk:
+    post:
+      description: Отправка сообщения в ВК
+      parameters:
+      - description: Модель сообщения ВК
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.SendVkRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Отправка сообщения в ВК
+      tags:
+      - API
+  /api/afflictions:
+    get:
+      description: Список недугов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Affliction'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список недугов
+      tags:
+      - API
+  /api/allMagicItems:
+    get:
+      description: Список волшебных предметов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MagicItemForList'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список волшебных предметов
+      tags:
+      - API
+  /api/animalCompanions:
+    get:
+      description: Список верных зверей
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.AnimalCompanion'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список верных зверей
+      tags:
+      - API
+  /api/archetypeInfo:
+    get:
+      description: Информация по классу
+      parameters:
+      - description: Alias народа
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.ArchetypeInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по классу
+      tags:
+      - API
+  /api/archetypes:
+    get:
+      description: Список архетипов
+      parameters:
+      - description: Alias класса
+        in: query
+        name: alias
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.ClassWithArchetypes'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список архетипов
+      tags:
+      - API
+  /api/armors:
+    get:
+      description: Список доспехов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Armor'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список доспехов
+      tags:
+      - API
+  /api/beastInfo:
+    get:
+      description: Информация по монстру
+      parameters:
+      - description: Alias монстра
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.BeastInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по монстру
+      tags:
+      - API
+  /api/beasts:
+    get:
+      description: Список монстров
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Beast'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список монстров
+      tags:
+      - API
+  /api/bloodlineInfo:
+    get:
+      description: Информация по наследию
+      parameters:
+      - description: Alias класса
+        in: path
+        name: classAlias
+        required: true
+        type: string
+      - description: Alias наследия
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.BloodlineInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по наследию
+      tags:
+      - API
+  /api/bloodlines:
+    get:
+      description: Список наследий
+      parameters:
+      - description: Alias класса
+        in: path
+        name: classAlias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Bloodline'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список наследий
+      tags:
+      - API
+  /api/bookInfo:
+    get:
+      description: Информация по книге
+      parameters:
+      - description: Alias книги
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.BookInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по книге
+      tags:
+      - API
+  /api/books:
+    get:
+      description: Список книг
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Books'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список книг
+      tags:
+      - API
+  /api/bot/classes:
+    get:
+      description: Список классов
+      parameters:
+      - description: Id класса
+        in: query
+        name: id
+        type: integer
+      - description: Alias класса
+        in: query
+        name: alias
+        type: string
+      - description: Флаг магического класса
+        in: query
+        name: magicClass
+        type: boolean
+      - description: Флаг выдачи полного контента по классу
+        in: query
+        name: extended
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.BotClassInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список классов
+      tags:
+      - Bot Spell API
+  /api/bot/rulebooks:
+    get:
+      description: Список книг
+      parameters:
+      - description: Флаг наличия заклинаний
+        in: query
+        name: withSpells
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.BotBook'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список книг
+      tags:
+      - Bot Spell API
+  /api/bot/spells:
+    get:
+      description: Список заклинаний
+      parameters:
+      - description: Id заклинания
+        in: query
+        name: id
+        type: integer
+      - description: Наименование
+        in: query
+        name: name
+        type: string
+      - description: Name
+        in: query
+        name: engName
+        type: string
+      - description: Идентификатор класса
+        in: query
+        name: classId
+        type: integer
+      - description: Alias заклинания
+        in: query
+        name: alias
+        type: string
+      - description: Круг заклинания
+        in: query
+        name: level
+        type: integer
+      - collectionFormat: csv
+        description: Список идентификаторов книг
+        in: query
+        items:
+          type: integer
+        name: rulebookIds
+        type: array
+      - description: Флаг выдачи полного контента по заклинанию
+        in: query
+        name: extended
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.BotSpellInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список заклинаний
+      tags:
+      - Bot Spell API
+  /api/classInfo:
+    get:
+      description: Информация по классу
+      parameters:
+      - description: Alias народа
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.ClassInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по классу
+      tags:
+      - API
+  /api/classes:
+    get:
+      description: Список классов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Class'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список классов
+      tags:
+      - API
+  /api/creatureTypes:
+    get:
+      description: Список типов существ
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CreatureType'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список типов существ
+      tags:
+      - API
+  /api/domainInfo:
+    get:
+      description: Информация по сфере/инквизиции
+      parameters:
+      - description: Alias сферы/инквизиции
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.DomainInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по сфере/инквизиции
+      tags:
+      - API
+  /api/domains:
+    get:
+      description: Список Сфер/Инквизиций
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Domain'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список Сфер/Инквизиций
+      tags:
+      - API
+  /api/featInfo:
+    get:
+      description: Информация по черте
+      parameters:
+      - description: Alias черты
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.FeatInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по черте
+      tags:
+      - API
+  /api/feats:
+    get:
+      description: Список черт
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Feat'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список черт
+      tags:
+      - API
+  /api/gods:
+    get:
+      description: Список божеств
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.God'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список божеств
+      tags:
+      - API
+  /api/goods:
+    get:
+      description: Список товаров
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Good'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список товаров
+      tags:
+      - API
+  /api/goods/addWaitingList:
+    post:
+      description: Добавление товара в список ожидания
+      parameters:
+      - description: Модель обратной связи
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.AddGoodInWaitingListRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление товара в список ожидания
+      tags:
+      - API
+  /api/goodsAndServices:
+    get:
+      description: Список товаров и услуг
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.GoodAndService'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список товаров и услуг
+      tags:
+      - API
+  /api/gui/commonPage:
+    get:
+      description: Получение статической страницы по id
+      parameters:
+      - description: Идентификатор страницы
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.StaticPage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение статической страницы по id
+      tags:
+      - API
+    post:
+      description: Добавление или изменение статической страницы
+      parameters:
+      - description: Модель статической страницы
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.StaticPage'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.UpsertResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление или изменение статической страницы
+      tags:
+      - API
+  /api/haunts:
+    get:
+      description: Список видений
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Haunt'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список видений
+      tags:
+      - API
+  /api/magicItemAbilities:
+    get:
+      description: Список волшебных предметов
+      parameters:
+      - description: Тип волшебных предметов
+        in: path
+        name: types
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MagicItemInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список волшебных предметов
+      tags:
+      - API
+  /api/magicItemInfo:
+    get:
+      description: Информация по волшебному предмету
+      parameters:
+      - description: Alias волшебного предмета
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MagicItemInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по волшебному предмету
+      tags:
+      - API
+  /api/magicItems:
+    get:
+      description: Список волшебных предметов
+      parameters:
+      - description: Тип волшебных предметов
+        in: path
+        name: types
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MagicItemInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список волшебных предметов
+      tags:
+      - API
+  /api/monsterAbilities:
+    get:
+      description: Список способностей монстров
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MonsterAbility'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список способностей монстров
+      tags:
+      - API
+  /api/monstrousMounts:
+    get:
+      description: Список чудовищных скакунов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MonstrousMount'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список чудовищных скакунов
+      tags:
+      - API
+  /api/news:
+    get:
+      description: Получение актуальных всех новостей
+      parameters:
+      - description: offset результата. По умолчанию 0
+        in: query
+        name: offset
+        type: integer
+      - description: limit результата. По умолчанию 1000
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.News'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение актуальных всех новостей
+      tags:
+      - API
+  /api/news/last:
+    get:
+      description: Получение всех новостей
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.News'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение всех новостей
+      tags:
+      - API
+  /api/npcInfo:
+    get:
+      description: Информация по персонажу ведущего
+      parameters:
+      - description: Alias персонажа ведущего
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.NpcInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по персонажу ведущего
+      tags:
+      - API
+  /api/npcs:
+    get:
+      description: Список персонажей ведущего
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.NameAlias'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список персонажей ведущего
+      tags:
+      - API
+  /api/orderInfo:
+    get:
+      description: Информация по ордену
+      parameters:
+      - description: Alias ордена
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.OrderInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по ордену
+      tags:
+      - API
+  /api/orders:
+    get:
+      description: Список орденов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Order'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список орденов
+      tags:
+      - API
+  /api/prestigeClassInfo:
+    get:
+      description: Информация по престиж-классу
+      parameters:
+      - description: Alias престиж-класса
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.PrestigeClassInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по престиж-классу
+      tags:
+      - API
+  /api/prestigeClasses:
+    get:
+      description: Список престиж-классов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Class'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список престиж-классов
+      tags:
+      - API
+  /api/raceInfo:
+    get:
+      description: Информация по народу
+      parameters:
+      - description: Alias народа
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.RaceInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по народу
+      tags:
+      - API
+  /api/races:
+    get:
+      description: Список народов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Race'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список народов
+      tags:
+      - API
+  /api/search:
+    get:
+      description: Поиск
+      parameters:
+      - description: Поисковая строка
+        in: query
+        name: query
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.SearchResult'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Поиск
+      tags:
+      - API
+  /api/sendFeedback:
+    post:
+      description: Получение всех помощников по группам
+      parameters:
+      - description: Модель обратной связи
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.FeedbackRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение всех помощников по группам
+      tags:
+      - API
+  /api/skillInfo:
+    get:
+      description: Информация по навыку
+      parameters:
+      - description: Alias навыка
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.SkillInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по навыку
+      tags:
+      - API
+  /api/skills:
+    get:
+      description: Список навыков
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.GetSkillsResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список навыков
+      tags:
+      - API
+  /api/spellInfo:
+    get:
+      description: Информация по заклинанию
+      parameters:
+      - description: Alias заклинания
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.SpellInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по заклинанию
+      tags:
+      - API
+  /api/spellSchoolInfo:
+    get:
+      description: Информация по школе
+      parameters:
+      - description: Alias школы
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.FeatInfo'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Информация по школе
+      tags:
+      - API
+  /api/spellSchools:
+    get:
+      description: Список школ магии
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.School'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список школ магии
+      tags:
+      - API
+  /api/spells:
+    get:
+      description: Список заклинаний
+      parameters:
+      - description: Alias класса
+        in: path
+        name: classAlias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Spell'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список заклинаний
+      tags:
+      - API
+  /api/spirits/{alias}:
+    get:
+      description: Список духов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.MediumSpiritInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список духов
+      tags:
+      - API
+  /api/spirits/shaman:
+    get:
+      description: Список духов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.ShamanSpiritInfo'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список духов
+      tags:
+      - API
+  /api/thanks:
+    get:
+      description: Получение всех помощников по группам
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Thanks'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение всех помощников по группам
+      tags:
+      - API
+  /api/traits:
+    get:
+      description: Список штрихов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Trait'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список штрихов
+      tags:
+      - API
+  /api/translations:
+    get:
+      description: Получение переводов в группе
+      parameters:
+      - description: Тип переводов
+        in: query
+        name: alias
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Translation'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Получение переводов в группе
+      tags:
+      - API
+  /api/traps:
+    get:
+      description: Список ловушек
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Trap'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список ловушек
+      tags:
+      - API
+  /api/user/auth:
+    post:
+      description: Авторизация пользователя
+      parameters:
+      - description: Модель авторизации
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserAuthRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.UserAuthResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Авторизация пользователя
+      tags:
+      - API
+  /api/user/changeData:
+    post:
+      description: Изменить данные пользователя
+      parameters:
+      - description: Модель регистрации
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserChangeDataRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Изменить данные пользователя
+      tags:
+      - API
+  /api/user/favourites:
+    delete:
+      description: Удаление списка избранного
+      parameters:
+      - description: Модель добавления/удаления списка избранного
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserFavouritesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Favourites'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Удаление списка избранного
+      tags:
+      - API
+    get:
+      description: Список избранного
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Favourites'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список избранного
+      tags:
+      - API
+    patch:
+      description: Изменение списка избранного
+      parameters:
+      - description: Модель изменения списка избранного
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.RenameUserFavouritesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Favourites'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Изменение списка избранного
+      tags:
+      - API
+    post:
+      description: Добавление списка избранного
+      parameters:
+      - description: Модель добавления/удаления списка избранного
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserFavouritesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Favourites'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Добавление списка избранного
+      tags:
+      - API
+  /api/user/favourites/items:
+    patch:
+      description: Изменение списка избранного
+      parameters:
+      - description: Модель изменения списка избранного
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.ChangeUserFavouritesItemsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Favourites'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Изменение списка избранного
+      tags:
+      - API
+  /api/user/register:
+    post:
+      description: Регистрация пользователя
+      parameters:
+      - description: Модель регистрации
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserRegisterRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.UserAuthResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Регистрация пользователя
+      tags:
+      - API
+  /api/user/resetPassword:
+    post:
+      description: Сброс пароля пользователя
+      parameters:
+      - description: Модель регистрации
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserResetPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Сброс пароля пользователя
+      tags:
+      - API
+  /api/weapons:
+    get:
+      description: Список оружия
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Weapon'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список оружия
+      tags:
+      - API
+  /api/wildTalents:
+    get:
+      description: Список диких талантов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.WildTalent'
+            type: array
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            $ref: '#/definitions/model.ErrorResponse'
+      summary: Список диких талантов
+      tags:
+      - API
+  /armors:
+    get:
+      description: Доспехи
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Доспехи
+      tags:
+      - Site
+  /armors/description:
+    get:
+      description: Общее описание доспехов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание доспехов
+      tags:
+      - Site
+  /bestiary:
+    get:
+      description: Бестиарий
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Бестиарий
+      tags:
+      - Site
+  /bestiary/animalCompanion:
+    get:
+      description: Верные звери
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Верные звери
+      tags:
+      - Site
+  /bestiary/appendix/acquiredTemplates:
+    get:
+      description: Приобретённые шаблоны
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Приобретённые шаблоны
+      tags:
+      - Site
+  /bestiary/appendix/addingRacialHitDice:
+    get:
+      description: Добавление КЗ народа
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Добавление КЗ народа
+      tags:
+      - Site
+  /bestiary/appendix/creatureTypes:
+    get:
+      description: Типы существ
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Типы существ
+      tags:
+      - Site
+  /bestiary/appendix/encounterTables:
+    get:
+      description: Таблицы случайных сцен
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Таблицы случайных сцен
+      tags:
+      - Site
+  /bestiary/appendix/monsterCreation:
+    get:
+      description: Создание чудовища
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Создание чудовища
+      tags:
+      - Site
+  /bestiary/appendix/monsterRoles:
+    get:
+      description: Роли чудовищ
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Роли чудовищ
+      tags:
+      - Site
+  /bestiary/appendix/monstersAsPCs:
+    get:
+      description: Чудовища как персонажи игроков
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Чудовища как персонажи игроков
+      tags:
+      - Site
+  /bestiary/appendix/simpleTemplates:
+    get:
+      description: Простые шаблоны
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Простые шаблоны
+      tags:
+      - Site
+  /bestiary/appendix/universalMonsterRules:
+    get:
+      description: Общие правила для чудовищ
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общие правила для чудовищ
+      tags:
+      - Site
+  /bestiary/beast/{alias}:
+    get:
+      description: Информация по монстру
+      parameters:
+      - description: Alias монстра
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по монстру
+      tags:
+      - Site
+  /bestiary/description:
+    get:
+      description: Общее описание существ
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание существ
+      tags:
+      - Site
+  /bestiary/eidolon:
+    get:
+      description: Эйдолоны
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Эйдолоны
+      tags:
+      - Site
+  /bestiary/familiar:
+    get:
+      description: Фамильяры
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Фамильяры
+      tags:
+      - Site
+  /bestiary/monstrousMount:
+    get:
+      description: Чудовищные скакуны
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Чудовищные скакуны
+      tags:
+      - Site
+  /bestiary/phantom:
+    get:
+      description: Фантомы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Фантомы
+      tags:
+      - Site
+  /bigAndLittleCreatures:
+    get:
+      description: Большие и маленькие существа в бою
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Большие и маленькие существа в бою
+      tags:
+      - Site
+  /books:
+    get:
+      description: Список книг
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Список книг
+      tags:
+      - Site
+  /books/{alias}:
+    get:
+      description: Информация по книге
+      parameters:
+      - description: Alias книги
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по книге
+      tags:
+      - Site
+  /buildingAdventure:
+    get:
+      description: Создание приключения
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Создание приключения
+      tags:
+      - Site
+  /campaignTips:
+    get:
+      description: Как создавать кампанию
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Как создавать кампанию
+      tags:
+      - Site
+  /characterCreate:
+    get:
+      description: Создание персонажа
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Создание персонажа
+      tags:
+      - Site
+  /class:
+    get:
+      description: Классы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Классы
+      tags:
+      - Site
+  /class/{alias}:
+    get:
+      description: Информация по классу
+      parameters:
+      - description: Alias народа
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по классу
+      tags:
+      - Site
+  /class/{alias}/bloodline:
+    get:
+      description: Наследия
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Наследия
+      tags:
+      - Site
+  /class/{alias}/bloodline/{bloodlineAlias}:
+    get:
+      description: Информация по наследию
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      - description: Alias наследия
+        in: path
+        name: bloodlineAlias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по наследию
+      tags:
+      - Site
+  /class/{alias}/order:
+    get:
+      description: Наследия
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Наследия
+      tags:
+      - Site
+  /class/{alias}/order/{orderAlias}:
+    get:
+      description: Информация по ордену
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      - description: Alias ордена
+        in: path
+        name: orderAlias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по ордену
+      tags:
+      - Site
+  /class/{alias}/spirit:
+    get:
+      description: Духи
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Духи
+      tags:
+      - Site
+  /class/{alias}/wildTalent:
+    get:
+      description: Дикие таланты
+      parameters:
+      - description: Alias класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Дикие таланты
+      tags:
+      - Site
+  /class/archetype:
+    get:
+      description: Все Архетипы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Все Архетипы
+      tags:
+      - Site
+  /class/archetype/{classAlias}:
+    get:
+      description: Архетипы Класса
+      parameters:
+      - description: Alias класса
+        in: path
+        name: classAlias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Архетипы Класса
+      tags:
+      - Site
+  /class/archetype/{classAlias}/{alias}:
+    get:
+      description: Информация по классу
+      parameters:
+      - description: Alias народа
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по классу
+      tags:
+      - Site
+  /class/prestige:
+    get:
+      description: Престиж-Классы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Престиж-Классы
+      tags:
+      - Site
+  /class/prestige/{alias}:
+    get:
+      description: Информация по престиж-классу
+      parameters:
+      - description: Alias престиж-класса
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по престиж-классу
+      tags:
+      - Site
+  /combatModifiers:
+    get:
+      description: Боевые модификаторы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Боевые модификаторы
+      tags:
+      - Site
+  /combatStatistics:
+    get:
+      description: Основные понятия боевой системы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Основные понятия боевой системы
+      tags:
+      - Site
+  /commonDictionary:
+    get:
+      description: Основные понятия
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Основные понятия
+      tags:
+      - Site
+  /conditions:
+    get:
+      description: Состояния
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Состояния
+      tags:
+      - Site
+  /contacts:
+    get:
+      description: Контакты
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Контакты
+      tags:
+      - Site
+  /dice:
+    get:
+      description: Генератор бросков кубиков
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Генератор бросков кубиков
+      tags:
+      - Site
+  /dungeons:
+    get:
+      description: Подземелья
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Подземелья
+      tags:
+      - Site
+  /duringGame:
+    get:
+      description: Во время игры
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Во время игры
+      tags:
+      - Site
+  /endingCampaign:
+    get:
+      description: Завершение кампании
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Завершение кампании
+      tags:
+      - Site
+  /environment/hazards:
+    get:
+      description: Опасности
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Опасности
+      tags:
+      - Site
+  /environment/specialArea/irrisen:
+    get:
+      description: Иррисен
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Иррисен
+      tags:
+      - Site
+  /environmentalRules:
+    get:
+      description: Опасная среда
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Опасная среда
+      tags:
+      - Site
+  /exploration:
+    get:
+      description: Исследование местности
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Исследование местности
+      tags:
+      - Site
+  /feat:
+    get:
+      description: Черты
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Черты
+      tags:
+      - Site
+  /feat/{alias}:
+    get:
+      description: Информация по черте
+      parameters:
+      - description: Alias навыка
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по черте
+      tags:
+      - Site
+  /gameExample:
+    get:
+      description: Пример игры
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Пример игры
+      tags:
+      - Site
+  /generator/adventure:
+    get:
+      description: Генератор случайных приключений
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Генератор случайных приключений
+      tags:
+      - Site
+  /generator/smallProblem:
+    get:
+      description: Генератор маленьких проблем
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Генератор маленьких проблем
+      tags:
+      - Site
+  /god:
+    get:
+      description: Божества
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Божества
+      tags:
+      - Site
+  /god/domain:
+    get:
+      description: Сферы/Инквизиции
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Сферы/Инквизиции
+      tags:
+      - Site
+  /god/domain/{alias}:
+    get:
+      description: Информация по сфере
+      parameters:
+      - description: Alias сферы
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по сфере
+      tags:
+      - Site
+  /god/inquisition/{alias}:
+    get:
+      description: Информация по инквизиции
+      parameters:
+      - description: Alias инквизиции
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по инквизиции
+      tags:
+      - Site
+  /god/subdomain/{alias}:
+    get:
+      description: Информация по подсфере
+      parameters:
+      - description: Alias подсферы
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по подсфере
+      tags:
+      - Site
+  /goodsAndServices:
+    get:
+      description: Товары и услуги
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Товары и услуги
+      tags:
+      - Site
+  /haunts:
+    get:
+      description: Видения
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Видения
+      tags:
+      - Site
+  /haunts/description:
+    get:
+      description: Общее описание видений
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание видений
+      tags:
+      - Site
+  /howCombatWorks:
+    get:
+      description: Как работает система боя
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Как работает система боя
+      tags:
+      - Site
+  /injuryAndDeath:
+    get:
+      description: Ранения и смерть
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Ранения и смерть
+      tags:
+      - Site
+  /magicItem/{alias}:
+    get:
+      description: Информация по волшебному предмету
+      parameters:
+      - description: Alias волшебного предмета
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по волшебному предмету
+      tags:
+      - Site
+  /magicItems:
+    get:
+      description: Все волшебные предметы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Все волшебные предметы
+      tags:
+      - Site
+  /magicItems/armor:
+    get:
+      description: Броня
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Броня
+      tags:
+      - Site
+  /magicItems/artifacts:
+    get:
+      description: Артефакты
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Артефакты
+      tags:
+      - Site
+  /magicItems/cursedItems:
+    get:
+      description: Проклятые предметы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Проклятые предметы
+      tags:
+      - Site
+  /magicItems/damagingMagicItems:
+    get:
+      description: Повреждение волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Повреждение волшебных предметов
+      tags:
+      - Site
+  /magicItems/intelligentItems:
+    get:
+      description: Разумные предметы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Разумные предметы
+      tags:
+      - Site
+  /magicItems/magicItemCreation:
+    get:
+      description: Создание волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Создание волшебных предметов
+      tags:
+      - Site
+  /magicItems/magicItemDescriptions:
+    get:
+      description: Описание волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Описание волшебных предметов
+      tags:
+      - Site
+  /magicItems/magicItemsOnTheBody:
+    get:
+      description: Ношение волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Ношение волшебных предметов
+      tags:
+      - Site
+  /magicItems/potions:
+    get:
+      description: Зелья
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Зелья
+      tags:
+      - Site
+  /magicItems/purchasingMagicItems:
+    get:
+      description: Покупка волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Покупка волшебных предметов
+      tags:
+      - Site
+  /magicItems/rings:
+    get:
+      description: Кольца
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Кольца
+      tags:
+      - Site
+  /magicItems/rods:
+    get:
+      description: Скипетры
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Скипетры
+      tags:
+      - Site
+  /magicItems/runeforgedWeapon:
+    get:
+      description: Рунное оружие
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Рунное оружие
+      tags:
+      - Site
+  /magicItems/savingThrowsAgainstMagicItemPowers:
+    get:
+      description: Испытания против свойств волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Испытания против свойств волшебных предметов
+      tags:
+      - Site
+  /magicItems/scrolls:
+    get:
+      description: Свитки
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Свитки
+      tags:
+      - Site
+  /magicItems/specificCursedItems:
+    get:
+      description: Особые проклятые предметы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Особые проклятые предметы
+      tags:
+      - Site
+  /magicItems/staves:
+    get:
+      description: Посохи
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Посохи
+      tags:
+      - Site
+  /magicItems/tattooMagic:
+    get:
+      description: Магические татуировки
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Магические татуировки
+      tags:
+      - Site
+  /magicItems/usingItems:
+    get:
+      description: Применение волшебных предметов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Применение волшебных предметов
+      tags:
+      - Site
+  /magicItems/wands:
+    get:
+      description: Жезлы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Жезлы
+      tags:
+      - Site
+  /magicItems/weapons:
+    get:
+      description: Оружие
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Оружие
+      tags:
+      - Site
+  /magicItems/wondrousItems:
+    get:
+      description: Волшебные вещицы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Волшебные вещицы
+      tags:
+      - Site
+  /movement:
+    get:
+      description: Перемещение
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Перемещение
+      tags:
+      - Site
+  /movementAndDistance:
+    get:
+      description: Перемещение, позиция и дистанция
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Перемещение, позиция и дистанция
+      tags:
+      - Site
+  /npc:
+    get:
+      description: Персонажи ведущего
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Персонажи ведущего
+      tags:
+      - Site
+  /npc/{alias}:
+    get:
+      description: Информация по персонажу ведущего
+      parameters:
+      - description: Alias персонажа ведущего
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по персонажу ведущего
+      tags:
+      - Site
+  /openGameLicense:
+    get:
+      description: Open Game License
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Open Game License
+      tags:
+      - Site
+  /preparingGame:
+    get:
+      description: Подготовка к игре
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Подготовка к игре
+      tags:
+      - Site
+  /race:
+    get:
+      description: Народы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Народы
+      tags:
+      - Site
+  /race/{alias}:
+    get:
+      description: Информация по книге
+      parameters:
+      - description: Alias народа
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по книге
+      tags:
+      - Site
+  /rules/archetype:
+    get:
+      description: Архетипы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Архетипы
+      tags:
+      - Site
+  /rules/characterAdvancement:
+    get:
+      description: Развитие персонажа
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Развитие персонажа
+      tags:
+      - Site
+  /rules/class:
+    get:
+      description: Классы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Классы
+      tags:
+      - Site
+  /rules/duels:
+    get:
+      description: Дуэли
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Дуэли
+      tags:
+      - Site
+  /rules/feat:
+    get:
+      description: Описание черт
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Описание черт
+      tags:
+      - Site
+  /rules/npc:
+    get:
+      description: Создание персонажа ведущего
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Создание персонажа ведущего
+      tags:
+      - Site
+  /rules/skill:
+    get:
+      description: Описание навыков
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Описание навыков
+      tags:
+      - Site
+  /rules/spell/arcaneSpells:
+    get:
+      description: Мистические заклинания
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Мистические заклинания
+      tags:
+      - Site
+  /rules/spell/castingSpells:
+    get:
+      description: Сотворение заклинаний
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Сотворение заклинаний
+      tags:
+      - Site
+  /rules/spell/description:
+    get:
+      description: Общее описание заклинаний
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание заклинаний
+      tags:
+      - Site
+  /rules/spell/divineSpells:
+    get:
+      description: Сакральные заклинания
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Сакральные заклинания
+      tags:
+      - Site
+  /rules/spell/schools:
+    get:
+      description: Школы заклинаний
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Школы заклинаний
+      tags:
+      - Site
+  /rules/spell/specialAbilities:
+    get:
+      description: Особые способности
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Особые способности
+      tags:
+      - Site
+  /rules/spell/spellDescriptions:
+    get:
+      description: Описание заклинаний
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Описание заклинаний
+      tags:
+      - Site
+  /rules/trait:
+    get:
+      description: Описание штрихов
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Описание штрихов
+      tags:
+      - Site
+  /search/{query}:
+    get:
+      description: Информация по характеристике
+      parameters:
+      - description: Поисковая строка
+        in: query
+        name: query
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по характеристике
+      tags:
+      - Site
+  /shop:
+    get:
+      description: Товары
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Товары
+      tags:
+      - Site
+  /skill:
+    get:
+      description: Навыки
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Навыки
+      tags:
+      - Site
+  /skill/{alias}:
+    get:
+      description: Информация по навыку
+      parameters:
+      - description: Alias навыка
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по навыку
+      tags:
+      - Site
+  /specialAbilities:
+    get:
+      description: Особые способности
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Особые способности
+      tags:
+      - Site
+  /specialAttacks:
+    get:
+      description: Особые атаки
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Особые атаки
+      tags:
+      - Site
+  /specialInitiativeActions:
+    get:
+      description: Сдвиг инициативы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Сдвиг инициативы
+      tags:
+      - Site
+  /specialMaterials:
+    get:
+      description: Особые материалы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Особые материалы
+      tags:
+      - Site
+  /spell/{alias}:
+    get:
+      description: Информация по Заклинанию
+      parameters:
+      - description: Alias заклинания
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по Заклинанию
+      tags:
+      - Site
+  /spell/list:
+    get:
+      description: Все заклинания
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Все заклинания
+      tags:
+      - Site
+  /spell/list/{classAlias}:
+    get:
+      description: Список заклинаний для класса
+      parameters:
+      - description: Alias класса
+        in: path
+        name: classAlias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Список заклинаний для класса
+      tags:
+      - Site
+  /spell/school:
+    get:
+      description: Школы магии волшебника
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Школы магии волшебника
+      tags:
+      - Site
+  /spell/school/{alias}:
+    get:
+      description: Информация по школе
+      parameters:
+      - description: Alias школы
+        in: path
+        name: alias
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Информация по школе
+      tags:
+      - Site
+  /startingCampaign:
+    get:
+      description: Начало кампании
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Начало кампании
+      tags:
+      - Site
+  /thanks:
+    get:
+      description: Благодарности
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Благодарности
+      tags:
+      - Site
+  /thePlanes:
+    get:
+      description: Планы
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Планы
+      tags:
+      - Site
+  /traits:
+    get:
+      description: Штрихи персонажей
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Штрихи персонажей
+      tags:
+      - Site
+  /translations/{translationType}:
+    get:
+      description: Что нового
+      parameters:
+      - description: Тип переводов
+        in: path
+        name: translationType
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Что нового
+      tags:
+      - Site
+  /traps:
+    get:
+      description: Ловушки
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Ловушки
+      tags:
+      - Site
+  /traps/description:
+    get:
+      description: Общее описание ловушек
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание ловушек
+      tags:
+      - Site
+  /urbanAdventures:
+    get:
+      description: Города
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Города
+      tags:
+      - Site
+  /user/favourites:
+    get:
+      description: Избранное
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Избранное
+      tags:
+      - Site
+  /user/login:
+    get:
+      description: Авторизация
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Авторизация
+      tags:
+      - Site
+  /user/logout:
+    get:
+      description: Разлогин
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Разлогин
+      tags:
+      - Site
+  /user/profile:
+    get:
+      description: Профиль
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Профиль
+      tags:
+      - Site
+  /variantRules/armorAsDamageReduction:
+    get:
+      description: Доспехи как снижение урона
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Доспехи как снижение урона
+      tags:
+      - Site
+  /variantRules/calledShots:
+    get:
+      description: Прицельные Удары
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Прицельные Удары
+      tags:
+      - Site
+  /vitalStatistics:
+    get:
+      description: Физические параметры
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Физические параметры
+      tags:
+      - Site
+  /wealthAndMoney:
+    get:
+      description: Богатство и деньги
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Богатство и деньги
+      tags:
+      - Site
+  /weapons:
+    get:
+      description: Оружие
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Оружие
+      tags:
+      - Site
+  /weapons/description:
+    get:
+      description: Общее описание оружия
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Общее описание оружия
+      tags:
+      - Site
+  /weather:
+    get:
+      description: Погода
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Погода
+      tags:
+      - Site
+  /wilderness:
+    get:
+      description: Дикая местность
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: INTERNAL_ERROR
+          schema:
+            type: string
+      summary: Дикая местность
+      tags:
+      - Site
+swagger: "2.0"
